@@ -5,9 +5,13 @@
     "**/routeTree.gen.ts": true
   },
   "files.readonlyInclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true,
     "**/routeTree.gen.ts": true
   },
   "files.watcherExclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true,
     "**/routeTree.gen.ts": true
   },
   "eslint.nodePath": ".yarn/sdks",

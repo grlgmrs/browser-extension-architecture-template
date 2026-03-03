@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "version": "1.0.1",
+  "name": "Chrome extension template - React app",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "open_side_panel": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P",
+        "mac": "Command+Shift+P"
+      },
+      "description": "Open the side panel"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://app.recruitrobin.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "sidePanel",
+    "scripting",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}
